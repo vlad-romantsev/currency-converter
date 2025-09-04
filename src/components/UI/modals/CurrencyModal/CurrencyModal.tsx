@@ -28,15 +28,22 @@ const CurrencyModal: React.FC<CurrencyModalProps> = ({
   const [focusedIndex, setFocusedIndex] = useState(0);
 
   const filteredCurrencies = useMemo(() => {
-    if (!searchTerm) return currencies;
-    
     const term = searchTerm.toLowerCase();
-    return currencies.filter(currency =>
-      currency.code.toLowerCase().includes(term) ||
-      currency.name.toLowerCase().includes(term) ||
-      currency.symbol.toLowerCase().includes(term)
-    );
-  }, [currencies, searchTerm]);
+
+    let result = !searchTerm
+      ? currencies
+      : currencies.filter(currency =>
+          currency.code.toLowerCase().includes(term) ||
+          currency.name.toLowerCase().includes(term) ||
+          currency.symbol.toLowerCase().includes(term)
+        );
+
+    return result.sort((a, b) => {
+      if (a.code === selectedCurrency) return -1;
+      if (b.code === selectedCurrency) return 1;
+      return 0;
+    });
+  }, [currencies, searchTerm, selectedCurrency]);
 
   useEffect(() => {
     if (isOpen) {
