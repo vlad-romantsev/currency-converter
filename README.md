@@ -11,6 +11,11 @@ A responsive currency conversion web application built with React + TypeScript, 
 - Keyboard navigation support
 - PWA capabilities for mobile installation
 
+## Live Demo
+
+The application is deployed and available online via **Vercel**:  
+👉 [https://currency-converter-liard-two.vercel.app/](https://currency-converter-liard-two.vercel.app/)
+
 ## Setup Instructions
 
 1. Clone the repository
