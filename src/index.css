@@ -1,0 +1,62 @@
+@import "/src/styles/variables.css";
+
+:root {
+  font-family: 'Inter';
+  font-weight: 400;
+  background-color: var(--color-bg-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ #root {
+  margin: 0 auto;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.app-header-wrapper{
+  width: 980px;
+  display: flex;
+  flex-direction: column;
+}
+.app-header{
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+h1, p{
+  margin: 0;
+  font-family: 'Inter'
+}
+h1{
+  font-weight: 600;
+}
+.header-title{
+  font-size: 32px;
+  font-weight: 600px !important;
+}
+.header-description{
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-family: Inter;
+}
+
+@media (max-width: 480px) {
+  .app-header-wrapper{
+    max-width: 100vw;
+    padding-top: 24px;
+  }
+  body{
+    place-items:inherit;
+  }
+}

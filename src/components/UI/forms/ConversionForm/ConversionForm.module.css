@@ -1,0 +1,235 @@
+.formWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 980px;
+  height: 318px;
+  align-items: center;
+}
+.statusBar{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  height: 23px;
+  margin-top: 30px;
+}
+
+.formElements{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.lastUpdatedText {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-size: 12px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+.conversionForm {
+  background: var(--color-bg-primary);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.form {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 20px 0px 20px;
+  width: 614px;
+  border: 1px solid #D4D4D4;
+  height: 171px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: black;
+  margin-top: 24px;
+}
+
+.swapContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.resultDisplay {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 318px;
+  height: 294px;
+  gap: 24px;
+}
+
+.resultLabel {
+  font-size: 18px;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.resultValueWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.resultValueTo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  min-height: 24px;
+}
+
+.resultValueFrom{
+  font-size: 12px;
+  font-weight: 500;  
+  color: var(--color-text-secondary);
+}
+.listRates{
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  gap: 12px;
+}
+.rate{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+}
+.rateTitle{
+  color: var(--color-text-secondary);
+
+}
+.rateValue{
+  color: var(--color-text-primary);
+}
+.ratesDescription{
+  display: flex;
+  height: 46px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  align-items: center;
+  text-align: center;
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--color-bg-hover) 25%, var(--color-border-secondary) 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  height: 20px;
+  border-radius: 4px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 40px;
+}
+
+.formSpinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: formSpin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.loadingText {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+@keyframes formSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.offlineWarning {
+  color: #ef4444;
+  font-size: 12px;
+  font-style: italic;
+}
+
+@media (max-width: 480px){
+  .statusBar{
+    height: auto;
+  }
+  .formWrapper{
+    width: 100vw;
+  }
+  .resultDisplay{
+    width: calc(100vw - 32px);
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+  .resultLabel{
+    padding: 20px 20px 0px 20px;
+  }
+  .listRates{
+    padding: 20px;
+  }
+  .ratesDescription{
+    padding: 0px 20px 20px 20px;
+  }
+  .form{
+    width: calc(100vw - 32px);
+    margin: 0 16px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto;
+  }
+  .formElements, .inputGroup,.statusBar{
+    flex-direction: column;
+    align-items: center;
+  }
+  .inputGroup{
+    gap: 0px;
+  }
+  
+}

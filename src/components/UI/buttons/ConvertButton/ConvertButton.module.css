@@ -1,0 +1,46 @@
+.convertButton {
+  border: 1px solid #BEDBFF;
+  border-radius: 8px;
+  background: #EFF6FF;
+  color: var(--color-text-tertiary);
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 110px;
+  min-height: 23px;
+  justify-content: center;
+  white-space: nowrap
+}
+
+
+.convertButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.convertButton:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

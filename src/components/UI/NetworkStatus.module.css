@@ -1,0 +1,31 @@
+.networkStatus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  min-width: 70px;
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.online {
+  background-color: #F0FDF4;
+  color: #008236;
+  border: 1px solid #B9F8CF;
+}
+
+.offline {
+  background-color: #FEF2F2;
+  color: #C10007;
+  border: 1px solid #FFC9C9;
+  
+}
+
