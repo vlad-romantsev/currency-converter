@@ -271,6 +271,18 @@
   100% { transform: rotate(360deg); }
 }
 
+.currencyContentWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.checkIconWrapper{
+  display: flex;
+  align-items: flex-end;
+}
 @media (max-width: 480px) {
   .modal {
     width: calc(100vw - 32px);

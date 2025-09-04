@@ -4,6 +4,7 @@ import type { Currency } from '../../../../types';
 import { SearchInput } from '../../form-elements/SearchInput/SearchInput';
 import { getCurrencySymbol } from '../../../../utils/currencySymbols';
 import CloseButton from '../../icons/CloseButton';
+import CheckIcon from '../../icons/CheckIcon';
 
 interface CurrencyModalProps {
   isOpen: boolean;
@@ -115,10 +116,14 @@ const CurrencyModal: React.FC<CurrencyModalProps> = ({
                 onClick={() => handleCurrencySelect(currency.code)}
               >
                 <span className={styles.currencyCode}>{getCurrencySymbol(currency.code)}</span>
-                <div className={styles.currencyContent}>
-                  <span className={styles.currencyName}>{currency.name}</span>
-                  <span className={styles.currencySymbol}>{currency.symbol}</span>
+                <div className={styles.currencyContentWrapper}>
+                  <div className={styles.currencyContent}>
+                    <span className={styles.currencyName}>{currency.name}</span>
+                    <span className={styles.currencySymbol}>{currency.symbol}</span>
+                  </div>
+                  {selectedCurrency === currency.code ? <CheckIcon className={styles.checkIconWrapper}/> : <></>}
                 </div>
+
               </button>
             ))
           )}
