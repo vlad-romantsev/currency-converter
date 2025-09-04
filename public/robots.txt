@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /manifest.webmanifest
+Disallow: /sw.js
+Disallow: /workbox-*.js
+
+Sitemap: https://your-domain.com/sitemap.xml
